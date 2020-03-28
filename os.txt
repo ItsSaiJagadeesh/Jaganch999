@@ -1,0 +1,47 @@
+1)Include conio and stdio header files. 
+
+2)Create main function and declare and initialize all the variables as required.  
+
+3) Scan the number of processes followed by taking input for both arrival time and burst time. 
+
+for(i=0;i<n;i++){ 
+
+    printf("\nEnter Burst Time for Process [%d] : ", i+1 ); 
+
+    scanf("%lf", &burstTime[i]); 
+
+    printf("Enter Arrival Time for Process [%d] : ", i+1 ); 
+
+    scanf("%lf", &arrivalTime[i] ); 
+
+    process[i]=i+1; 
+
+  }  
+
+4)Sort process according to arrival time using the temp variable  
+
+if(arrivalTime[i]<arrivalTime[j]) 
+
+use temp to sort. 
+
+5) Arrange according to Burst time, Execution time and Arrival Time 
+
+Arrival time <= Execution time  
+
+Use nested loop of i and j and check for the condition 
+
+if((b_time >= arrivalTime[i])&&(burstTime[i]<min)) 
+
+6)Use formulas to calculate values. 
+
+waitingTime[i] = sum - arrivalTime[i]; 
+
+turnaroundTime[i] = sum2 - arrivalTime[i]; 
+
+7)Calculate completion time using 
+
+completionTime[i] = completionTime[i-1] + burstTime[i]; 
+
+8) Use Priority = 1+ Waiting time / Estimated run time 
+
+9) Display. 
